@@ -30,12 +30,12 @@ module.exports = (sequelize) => {
     },
     subregion: {
       type: DataTypes.STRING,
-      allowNull: true,
+      // allowNull: true,
     },
     area: {
       //FLOAT for the area
       type: DataTypes.FLOAT, 
-      allowNull: true,
+      // allowNull: true,
     },
     population: {
       type: DataTypes.INTEGER,
