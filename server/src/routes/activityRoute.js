@@ -1,7 +1,12 @@
 const { Router } = require("express");
 // controllers
 const { postActivity } = require("../controllers/Activity/postActivity");
-const { getActivity } = require("../controllers/Activity/getActivity");
+const { getActivities } = require("../controllers/Activity/getActivities");
+const { putActivityById } = require("../controllers/Activity/putActivityById");
+const {
+  deleteActivityById,
+} = require("../controllers/Activity/deleteActivityById");
+
 //define route
 const activityRoute = Router();
 
@@ -33,11 +38,52 @@ activityRoute.post("/", async (req, res) => {
 activityRoute.get("/", async (req, res) => {
   try {
     //await for the resolution of getActivity function/controller
-    const activities = await getActivity();
+    const activities = await getActivities();
     res.status(200).send(activities);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
 
+//to update an activity by id you need to previously know the activity id
+activityRoute.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  // bring the updated data from the request body
+  const updatedData = req.body;
+  try {
+    const updatedActivity = await putActivityById(id, updatedData);
+    return res.status(200).json(updatedActivity);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+//to DELETE an activity by id you need to previously know the activity id
+activityRoute.delete("/:id", async (req, res) => {
+  // destructure the activity id from the URL params
+
+  const { id } = req.params;
+  try {
+    // call the 'deleteActivityById' controller with the id
+    const result = await deleteActivityById(id);
+    return res.status(200).json(result);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = { activityRoute };
+
+// activityRoute.put("/:id", async (req, res) => {});
+
+// activityRoute.delete("/:id", async (req, res) => {});
+
+// activityRoute.delete('/:id', async (req, res, next) => {
+//   const { id } = req.params;
+//   try {
+//       const activity = await Activity.destroy({ where: { id } });
+//       if (activity > 0) return res.send({ msg: "Activity deleted correctly." });
+//       res.send({ msg: "Activity doesn't exists" });
+//   } catch (error) {
+//       next(error);
+//   }
+// });
