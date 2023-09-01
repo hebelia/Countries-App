@@ -1,5 +1,4 @@
 const { DataTypes } = require("sequelize");
-
 // we inject the connection to sequelize
 module.exports = (sequelize) => {
   // defining models for the db
@@ -35,4 +34,4 @@ module.exports = (sequelize) => {
     },
   });
 };
-//since we only export the module as a file , when importing it we need to
+
