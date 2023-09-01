@@ -58,6 +58,7 @@ activityRoute.put("/:id", async (req, res) => {
   }
 });
 //to DELETE an activity by id you need to previously know the activity id
+//NOTE: every time you delete an activity that id no longer exists on the db so when a new activity is created it will have another id (autoincrement)
 activityRoute.delete("/:id", async (req, res) => {
   // destructure the activity id from the URL params
 
