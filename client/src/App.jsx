@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.scss";
+// imports
+import React from "react";
+import ReactDOM from "react-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+// views and components imports
+import Home from "./views/Home/Home";
+import CountryDetails from "./views/CountryDetails/CountryDetails";
+import Form from "./views/ActivityForm/ActivityForm";
+import LandingPage from "./views/LandingPage/LandingPage";
+import About from "./views/About/About";
+import Page404 from "./views/404/Page404";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  //pathname to hide nav
+  const { pathname } = useLocation();
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      {/* rendering the Nav component conditionally */}
+      {pathname !== "/" && <NavBar />}
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/detail/:id" element={<CountryDetails />} />
+        <Route path="/form" element={<Form />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/*" element={<Page404 />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;

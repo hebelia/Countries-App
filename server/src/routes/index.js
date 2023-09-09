@@ -8,7 +8,7 @@ const router = Router();
 
 //define two subroutes - modularization
 router.use("/countries", countryRoute);
-router.use("/activity", activityRoute);
+router.use("/activities", activityRoute);
 
 
 // const { getCountries } = require("../controllers/Country/getCountries.js");
