@@ -27,11 +27,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              onClick={handleOnClick}
-              className={style.btn}
-              to="/create-activities"
-            >
+            <NavLink onClick={handleOnClick} className={style.btn} to="/form">
               Create Activity
             </NavLink>
           </li>

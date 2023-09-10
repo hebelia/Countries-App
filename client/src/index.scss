@@ -33,13 +33,15 @@
 // PREVIOUS
 :root {
   //   font-family: "Nunito Sans", sans-serif;
-  font-family: "Varela Round", sans-serif;
+  // font-family: "Varela Round", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   // color-scheme: light dark;
   // color: rgba(255, 255, 255, 0.87);
   // background-color: #242424;
+  // height: 100vh;
+  // width: 100vw;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -51,45 +53,45 @@
 //global styles
 // NOTE REMOVE COMMENTS
 // select element styles
-select {
-  /* Make the select box round */
-  border-radius: 10px;
-  padding: 10px; /* Add padding for better spacing */
-  appearance: none; /* Remove default styles (browsers may handle this differently) */
-  background-color: #fff; /* Set the background color */
-  border: 1px solid #ccc; /* Add a border for better visibility */
-  cursor: pointer; /* Change cursor to indicate interactivity */
-}
+// select {
+//   /* Make the select box round */
+//   border-radius: 10px;
+//   padding: 10px; /* Add padding for better spacing */
+//   appearance: none; /* Remove default styles (browsers may handle this differently) */
+//   background-color: #fff; /* Set the background color */
+//   border: 1px solid #ccc; /* Add a border for better visibility */
+//   cursor: pointer; /* Change cursor to indicate interactivity */
+// }
 
-/* Apply styles to the dropdown arrow */
-select::after {
-  content: '\25BC'; /* Unicode arrow down character */
-  position: absolute;
-  top: 50%;
-  right: 10px; /* Adjust the right spacing as needed */
-  transform: translateY(-50%);
-  pointer-events: none; /* Prevent interaction with the arrow */
-}
+// /* Apply styles to the dropdown arrow */
+// select::after {
+//   content: '\25BC'; /* Unicode arrow down character */
+//   position: absolute;
+//   top: 50%;
+//   right: 10px; /* Adjust the right spacing as needed */
+//   transform: translateY(-50%);
+//   pointer-events: none; /* Prevent interaction with the arrow */
+// }
 
-/* Style the dropdown menu */
-select:focus {
-  outline: none; /* Remove the default focus outline */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow when focused */
-}
+// /* Style the dropdown menu */
+// select:focus {
+//   outline: none; /* Remove the default focus outline */
+//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow when focused */
+// }
 
-/* Style the dropdown options */
-select option {
-  /* Add padding and background color to options */
-  padding: 10px;
-  background-color: #fff;
-  color: #333; /* Set the text color */
-}
+// /* Style the dropdown options */
+// select option {
+//   /* Add padding and background color to options */
+//   padding: 10px;
+//   background-color: #fff;
+//   color: #333; /* Set the text color */
+// }
 
-/* style the selected option */
-select option:checked {
-  background-color: #007bff; /* Set a different background color for the selected option */
-  color: #fff; /* Set a different text color for the selected option */
-}
+// /* style the selected option */
+// select option:checked {
+//   background-color: #007bff; /* Set a different background color for the selected option */
+//   color: #fff; /* Set a different text color for the selected option */
+// }
 ////////////////////////////////////////////////////////////
 
 
