@@ -1,0 +1,56 @@
+
+@import "../../assets/variables.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $primary-color; /* Use your color variables */
+}
+
+.infoContainer {
+  text-align: center;
+  color: $secondary-color; /* Use your color variables */
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.containerAnimation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.globeLoader {
+  font-size: 4rem;
+  color: $accent-color; /* Use your color variables */
+  margin-right: 1rem;
+
+  i.fas.fa-plane {
+    font-size: 2rem;
+    animation: spin 2s linear infinite;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $accent-color; /* Use your color variables */
+  font-weight: bold;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($accent-color, 10%); /* Darken the color on hover */
+  }
+}
+
+/* Example of CSS keyframes animation for spinning the globe */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

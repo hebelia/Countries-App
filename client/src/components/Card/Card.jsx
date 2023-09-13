@@ -11,8 +11,8 @@ const Card = ({ name, flag, continent }) => {
       </div>
       <div className={style.infoContainer}>
         <h4 className={style.nameCountry}>{name}</h4>
-        <h4>Continent</h4>
-        <p>{continent}</p>
+        <p>Continent ↴</p>
+        <h4>{continent}</h4>
       </div>
     </div>
   );

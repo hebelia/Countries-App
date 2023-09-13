@@ -16,7 +16,7 @@ function App() {
   //pathname to hide nav
   const { pathname } = useLocation();
   return (
-    <div>
+    <div className="App">
       {/* rendering the Nav component conditionally */}
       {pathname !== "/" && <NavBar />}
       <Routes>

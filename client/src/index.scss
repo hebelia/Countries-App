@@ -29,8 +29,9 @@
 /* NOTE EDIT CSS LATER */
 
 // GLOBAL VARIABLES -> THAT IS WHY I WONT USE .MODULE.SCSS IN THIS FILE,
-
+@import "./assets/variables.scss";
 // PREVIOUS
+
 :root {
   //   font-family: "Nunito Sans", sans-serif;
   // font-family: "Varela Round", sans-serif;
@@ -40,8 +41,8 @@
   // color-scheme: light dark;
   // color: rgba(255, 255, 255, 0.87);
   // background-color: #242424;
-  // height: 100vh;
-  // width: 100vw;
+  height: 100vh;
+  width: 100vw;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -93,10 +94,6 @@
 //   color: #fff; /* Set a different text color for the selected option */
 // }
 ////////////////////////////////////////////////////////////
-
-
-
-
 
 // PREVIOUS
 // a {

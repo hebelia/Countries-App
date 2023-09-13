@@ -42,18 +42,27 @@
 // }
 
 /* ESTILOS GLOBALES */
-
+@import "./assets/variables.scss";
 @import url(./normalize.scss);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+/* nunito font */
 /* font-family: 'Nunito Sans', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap");
+
+/* poppins font */
+/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela&family=Varela+Round&display=swap");
+// font-family: 'Varela', sans-serif;
+// font-family: 'Varela Round', sans-serif;
 
 :root {
   --container-background-first: #4484a98a;
   --container-background-blue: #004974bf;
-  --container-background-darker: #0021338a;
+  --container-background-darker: #ABE1A0;
   /* --container-country-details-background-color: #4484a98a; */
-  --name-countries: #1eb53a;
+  --name-countries: #8cc739;
   --color-gray: #1c1b22;
   --color-gray-opacity: #1c1b2294;
   --color-gray-opacity-darker: #1c1b22e6;
@@ -68,21 +77,22 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   color: white;
   // font-family: 'Roboto', sans-serif;
   font-family: "Nunito Sans", sans-serif;
-//   background-image: url("../img/background.jpg");
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-attachment: fixed;
-//   background-position: center;
+  //   background-image: url("../img/background.jpg");
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   background-attachment: fixed;
+  //   background-position: center;
 
   min-height: 100vh;
   max-height: 100vh;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 a {
@@ -95,10 +105,11 @@ li {
   list-style: none;
 }
 
-a.active {
-  color: #64aaff;
-  background-color: #000;
-}
+// a.active {
+//   color: $primary-color;
+//   // background-color: $accent-color;
+// }
+
 
 p {
   margin: 0;
@@ -116,12 +127,13 @@ img {
 }
 
 .infoContainer {
-  background-color: #0021338a;
+  background-color: $secondary-color;
   /* width: 70rem;
     min-height: 50rem; */
   border-radius: 20px;
   margin-bottom: 5rem;
-  border: 2px solid white;
+  // border: 2px solid white;
+  box-shadow: $black-shadow;
 }
 
 .titleContainer {
@@ -132,10 +144,11 @@ img {
   font-size: 2rem;
   margin: 0;
   padding: 1rem;
+  background-color: $button-color;
 }
 
 .title {
-  background-color: var(--color-gray);
+  background-color: $button-color;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin-bottom: 1.3rem;
@@ -153,3 +166,5 @@ img {
     margin: 1rem 0.5rem;
   }
 }
+
+

@@ -104,12 +104,12 @@ const SideBar = () => {
     <>
       <div className={style.btnMenuFilters}>
         <a onClick={handleShowFilters} href="#">
-          <i className={`fa-solid fa-filter ${style.icon}`}></i>Filters
+          ⚙ Filters
         </a>
       </div>
       {/* ASIDE CONTAINER */}
       <aside ref={asideContainer} className={style.container}>
-        <p>Filters</p>
+        <h2>&gt;_ Filters</h2>
 
         <div className={style.btnClearContainer}>
           <button onClick={handleClearFilters} className={style.btnClear}>
@@ -130,9 +130,13 @@ const SideBar = () => {
                 placeholder="Country name"
                 id="filter"
               />
-              <a onClick={handleOnSubmit} href="#">
-                <i className="fa-solid fa-magnifying-glass"></i>
-              </a>
+              <button
+                onClick={handleOnSubmit}
+                href="#"
+                className={style.btnSearch}
+              >
+                🔎
+              </button>
             </form>
           </div>
         </div>

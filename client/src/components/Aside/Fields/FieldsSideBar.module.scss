@@ -1,6 +1,18 @@
+@import "../../../assets/variables.scss";
 .filterContainer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  background-color: $secondary-color;
+  border-radius: 2em;
+  padding: 1rem;
+  box-shadow: $black-shadow;
 }

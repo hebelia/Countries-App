@@ -1,12 +1,23 @@
+@import "../../assets/variables.scss";
 .navbar {
-  background-color: #ffffffe3;
+  background-color: #ffffff00;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* left: 0; 
 	top: 0; 
 	position: fixed; 
     width: 100%;
     z-index: 10; */
+  // border-bottom: 2px solid $secondary-color;
+  max-height: 100px;
+}
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+}
+.logoContainer h2 {
+  padding-top: 10px;
 }
 
 .btnsContainer {
@@ -23,17 +34,22 @@
 }
 
 .btn {
-  padding: 0.5rem 1rem;
-  color: white;
-  background-color: #000000e3;
+  margin-top: 2em;
+  align-self: center;
+  padding: 0.7em;
+  padding-left: 1em;
+  padding-right: 1em;
   border-radius: 10px;
-  font-size: 1.3rem;
-  transition: background-color 0.5s;
-  border: 2px solid transparent;
+  border: none;
+  color: black;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+  background-color: $button-color;
 }
 
 .btn:hover {
-  background-color: #000;
+  box-shadow: 6px 6px 0px #969696, -3px -3px 10px #ffffff;
+  transform: translateX(-0.5em) translateY(-0.5em);
 }
 
 li:last-child {
@@ -41,9 +57,10 @@ li:last-child {
 }
 
 .img {
-  height: 60px;
-  padding: 0rem 1rem;
-  padding: 0.3rem 1rem;
+  height: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
 }
 
 .containerMenu {
@@ -62,17 +79,19 @@ li:last-child {
   transition: background-color 0.3s;
 }
 
-.btnMenu:hover {
-  background-color: #000;
+// .btnMenu:hover {
+//   background-color: #000;
+// }
+.logoName {
+  color: $font-dark;
 }
-
 @media screen and (max-width: 930px) {
   .list {
     position: absolute;
     padding: 2rem;
     flex-direction: column;
     align-items: center;
-    background: #191919;
+    background: rgba(255, 255, 255, 0.738);
     left: -1000px;
     top: 40px;
     text-align: center;
@@ -88,7 +107,6 @@ li:last-child {
   .btn {
     display: block;
     width: 250px;
-    background-color: #191919;
   }
 
   .containerMenu {
@@ -98,4 +116,5 @@ li:last-child {
   .visible {
     left: 0;
   }
+  
 }

@@ -1,3 +1,5 @@
+@import "../../../assets/variables.scss";
+
 .containerInput {
     display: flex;
     flex-direction: column;
@@ -7,7 +9,9 @@
     border: 2px solid #fff;
     border-radius: 10px;
     padding: 1rem;
-    background-color: #14364adf;
+    background-color: $third-color;
+    color: $font-dark;
+    
 }
 
 .errorContainer {
@@ -25,8 +29,12 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.8rem;
+
 }
 
 .containerInput p {
     font-size: 1.4rem;
+}
+select,input{
+    border-bottom: 2px solid #000000;
 }

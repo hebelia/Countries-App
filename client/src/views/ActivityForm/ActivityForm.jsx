@@ -266,7 +266,7 @@ const ActivityForm = () => {
       <div className={style.container}>
         <div className={style.infoContainer}>
           <div className={style.titleContainer}>
-            <h3 className={style.title}>New Activity</h3>
+            <h3 className={style.title}>&gt;_ New Activity</h3>
           </div>
           <form action="" method="post" onSubmit={handleOnSubmit}>
             <FieldActivity

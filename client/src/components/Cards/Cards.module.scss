@@ -1,16 +1,22 @@
+@import "../../assets/variables.scss";
 .container {
-    background-color: var(--container-background-darker);
+    background-color: $secondary-color;
     margin: 2rem 3rem 5rem 3rem;
     border-radius: 20px;
     text-align: center;
-    border: 2px solid white;
+    // border: 2px solid white;
+    box-shadow: $black-shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .titleContainer {
-    background: var(--color-gray);
+    background: $button-color;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     margin-bottom: 1.3rem;
+    color: $font-dark;
 }
 
 .container h3 {

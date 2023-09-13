@@ -1,0 +1,161 @@
+// .container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   background-color: #f0f0f0;
+// }
+
+// .infoContainer {
+//   background-color: #fff;
+//   border-radius: 5px;
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+//   padding: 20px;
+//   max-width: 600px;
+// }
+
+// .title {
+//   font-size: 24px;
+//   margin: 0;
+//   color: #333;
+// }
+
+// .content {
+//   margin-top: 20px;
+//   font-size: 16px;
+//   color: #555;
+// }
+
+// .img {
+//   max-width: 100%;
+//   height: auto;
+// }
+
+// .floatRight {
+//   float: right;
+// }
+
+// .floatLeft {
+//   float: left;
+// }
+
+// /* Zoom animation for the logo */
+// @keyframes zoom {
+//   0% {
+//     transform: scale(1);
+//   }
+//   50% {
+//     transform: scale(1.1);
+//   }
+//   100% {
+//     transform: scale(1);
+//   }
+// }
+
+// .logo-img {
+//   animation: zoom 3s infinite; /* Adjust the duration as needed */
+// }
+@import "../../assets/variables.scss";
+
+.content {
+  padding: 2rem;
+  font-size: 1.5rem;
+  background-color: $third-color;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 20px;
+  max-width: 850px;
+  font-size: 1.2rem;
+  color: $font-dark;
+
+}
+.infoContainer {
+  align-items: center;
+  box-shadow: $black-shadow;
+}
+
+.img {
+  width: 250px;
+}
+
+.floatRight {
+  float: right;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.list {
+  list-style: disclosure-closed;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: $primary-color;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.containerAllIcons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: $secondary-color;
+  padding: 1rem;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.iconContainer p {
+  margin: 0;
+}
+
+.faReact {
+  color: $primary-color;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 580px) {
+  .floatRight,
+  .floatLeft {
+    float: none;
+  }
+
+  .containerImg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .img {
+    width: 150px;
+  }
+
+  .content {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+}
