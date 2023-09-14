@@ -4,6 +4,7 @@ import logo from "/img/world-trip-transparent.png";
 import style from "./About.module.scss";
 import {
   HTML,
+  SCSS,
   CSS,
   REACT,
   NODEJS,
@@ -79,11 +80,10 @@ const About = () => {
                 <p>HTML5</p>
               </div>
               <div className={style.iconContainer}>
-                <CSS />
-                <p>CSS3</p>
+                <SCSS />
+                <p>Module SCSS</p>
               </div>
               <div className={style.iconContainer}>
-                <i className={`fa-brands fa-react ${style.faReact}`}></i>
                 <REACT />
                 <p>React</p>
               </div>
