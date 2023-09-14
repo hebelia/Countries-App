@@ -33,10 +33,9 @@
 }
 
 .img {
-  width: 40%; /* Set the desired logo size */
   animation: zoomInOut 5s infinite;
   margin-bottom: 2em;
-  min-width: 200px;
+  max-width: 300px;
 }
 
 // @keyframes zoomInOut {
@@ -60,13 +59,12 @@
   border-radius: 1em;
   transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
-  border-bottom: solid 3px;
-  border-bottom-color: #aed144;
+  border-bottom: solid 5px $secondary-color;
 }
 
 .btn:hover {
   transform: scale(1.07); /* Add a scale effect on hover */
-  border-color: #29acdc;
+  border-color: $button-color;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.651);
 }
 

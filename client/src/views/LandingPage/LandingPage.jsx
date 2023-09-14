@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useFetchCountries } from "../../hooks/useFetchCountries";
 
 import style from "./landingPage.module.scss";
-import logo from "/img/logo.png";
+import logo from "/img/logo2.png";
 import backgroundVideo from "/video/landing-video.mp4";
 
 const LandingPage = () => {
@@ -21,11 +21,12 @@ const LandingPage = () => {
 
       <div className={style.contentOverlay}>
         {/* website logo */}
+        {/* <h1>&gt;_ World Trip</h1> */}
         <img className={style.img} src={logo} alt="Logo" />
-
+        
         {/* button */}
         <Link to="/home" className={style.btn}>
-          START
+        &gt;_ START JOURNEY
         </Link>
       </div>
     </div>

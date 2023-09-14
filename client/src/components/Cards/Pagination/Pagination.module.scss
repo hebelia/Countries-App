@@ -10,21 +10,28 @@
   //   border: 2px solid white;
   padding: 0.3rem 1rem;
   border-radius: 10px;
-  background-color: #0000008a;
+  background-color: #00000000;
 }
 
 .btnPage {
-  color: white;
-  margin: 0.3rem;
-  padding: 0.3rem 0.5rem;
-  border-radius: 10px;
-  background: none;
-  border: 0;
+  background-color: $third-color;
+  color: $font-dark;
+  font-weight: 500;
+  border: none;
+  border-radius: 30px;
+  min-width: 30px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 10px 15px;
+  margin: 3px;
+}
+.btnPage:hover {
+  box-shadow: 6px 6px 0px #969696;
+  transform: translateX(-0.3em) translateY(-0.3em);
 }
 
 .active {
-  background-color: $primary-color;
+  background-color: $button-color;
 }
 
 @media screen and (max-width: 1500px) {

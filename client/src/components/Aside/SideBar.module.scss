@@ -96,6 +96,11 @@ select {
   padding: 0.5rem;
   cursor: pointer;
   box-shadow: $black-shadow;
+  background-color: $button-color;
+}
+.btnClear:hover {
+box-shadow: 5px 7px 21px 0px $secondary-color,5px 7px 21px 0px rgba(0, 0, 0, 0.8);
+color:$font-light;
 }
 .btnSearch {
   width: 100%;
