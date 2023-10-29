@@ -30,14 +30,14 @@ I'm using markdown "reference style" links for readability.
   <p align="center">
     Welcome to <strong>World Trip</strong> - a dynamic web application crafted using the [countries] API. Dive deep into a rich tapestry of information, activities, and insights about nations across the globe!
 <br />
-<a href="https://github.com/hebelia/Integration-Project"><strong>:open_file_folder: Explore the documents »</strong></a>
+<a href="https://github.com/hebelia/Countries-App"><strong>:open_file_folder: Explore the documents »</strong></a>
 <br />
 <br />
-<a href="https://github.com/hebelia/Integration-Project">Initial release</a>
+<a href="https://github.com/hebelia/Countries-App">Initial release</a>
 ·
-<a href="https://github.com/hebelia/Integration-Project/issues">Report bug</a>
+<a href="https://github.com/hebelia/Countries-App/issues">Report bug</a>
 ·
-<a href="https://github.com/hebelia/Integration-Project/issues">Request feature</a>
+<a href="https://github.com/hebelia/Countries-App/issues">Request feature</a>
 
 </div>
 
@@ -173,7 +173,7 @@ I'm using markdown "reference style" links for readability.
 <h2 id="roadmap">>_ Extra features :bookmark:</h2>
 
 <br />:heavy_check_mark: Best Practices 🌟
-</br> Including: 
+</br> Including:
 
 <ul>
 <li><strong>Modularity:</strong> Code is structured modularly to enhance clarity and maintainability.</li>
@@ -235,16 +235,16 @@ Suggestions: [⋄ click here ⋄](https://github.com/hebelia/Countries-App/issue
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/hebelia/Integration-Project.svg?style=for-the-badge&color=abe1a0
-[contributors-url]: https://github.com/hebelia/Integration-Project/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/hebelia/Integration-Project.svg?style=for-the-badge&color=abe1a0
-[forks-url]: https://github.com/hebelia/Integration-Project/network/members
-[stars-shield]: https://img.shields.io/github/stars/hebelia/Integration-Project.svg?style=for-the-badge&color=abe1a0
-[stars-url]: https://github.com/hebelia/Integration-Project/stargazers
-[issues-shield]: https://img.shields.io/github/issues/hebelia/Integration-Project.svg?style=for-the-badge&color=abe1a0
-[issues-url]: https://github.com/hebelia/Integration-Project/issues
+[contributors-shield]: https://img.shields.io/github/contributors/hebelia/Countries-App.svg?style=for-the-badge&color=abe1a0
+[contributors-url]: https://github.com/hebelia/Countries-App/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/hebelia/Countries-App.svg?style=for-the-badge&color=abe1a0
+[forks-url]: https://github.com/hebelia/Countries-App/network/members
+[stars-shield]: https://img.shields.io/github/stars/hebelia/Countries-App.svg?style=for-the-badge&color=abe1a0
+[stars-url]: https://github.com/hebelia/Countries-App/stargazers
+[issues-shield]: https://img.shields.io/github/issues/hebelia/Countries-App.svg?style=for-the-badge&color=abe1a0
+[issues-url]: https://github.com/hebelia/Countries-App/issues
 [license-shield]: https://img.shields.io/badge/license-abe1a0?style=for-the-badge&logo=C&logoColor=3e6d8f
-[license-url]: https://github.com/hebelia/Integration-Project/blob/master/LICENSE.txt
+[license-url]: https://github.com/hebelia/Countries-App/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-abe1a0.svg?style=for-the-badge&logo=linkedin&logoColor=3e6d8f
 [linkedin-url]: https://www.linkedin.com/in/hebeliaromeu/
 [github-url]: https://github.com
