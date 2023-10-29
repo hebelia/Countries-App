@@ -8,10 +8,12 @@ const Page404 = () => {
       <div className={style.infoContainer}>
         <h4 className={style.title}>Error - 404</h4>
         <div className={style.containerAnimation}>
-          <div className={`${style.globeLoader} fa-solid fa-globe`}>
-            <i className="fas fa-plane"></i>
+          <div className={style.globeLoader}>
+            <h5>
+              <span>&gt;_</span> End of the road... <h2>🛣</h2>
+            </h5>
             <Link className={style.link} to="/home">
-              Home
+              ✈ Go back home 🗺
             </Link>
           </div>
         </div>

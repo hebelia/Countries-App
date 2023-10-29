@@ -45,7 +45,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height:100%;
+  height: 100%;
 
   // border: 2px solid #fff;
   border-radius: 20px;
@@ -186,9 +186,8 @@
   align-items: center;
   transition: 0.5s;
 }
-.containerActivities h3{
-  color:$font-dark;
-
+.containerActivities h3 {
+  color: $font-dark;
 }
 
 .activityContainer h4 {
@@ -316,6 +315,15 @@
   visibility: visible;
 }
 
+// landing page icon
+.landing {
+  transition: 0.4s ease-in-out;
+}
+
+.landing:hover {
+  transform: scale(1.2);
+}
+
 @media screen and (max-width: 930px) {
   .infoContainer {
     width: auto;
@@ -345,13 +353,4 @@
   .codeContainer p {
     left: 70%;
   }
-}
-
-// landing page icon
-.landing {
-  transition: 0.4s ease-in-out;
-}
-
-.landing:hover {
-  transform: scale(1.2);
 }

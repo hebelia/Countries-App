@@ -216,7 +216,7 @@ const CountryDetails = () => {
                   ) : (
                     <div>
                       <p className={style.dontFound}>
-                        There are no activities for this country yet   ╯︿╰
+                        There are no activities for this country yet ╯︿╰
                       </p>
                     </div>
                   )}

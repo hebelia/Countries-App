@@ -1,5 +1,4 @@
 //action creators
-
 import axios from "axios";
 import {
   CREATE_NEW_ACTIVITY,

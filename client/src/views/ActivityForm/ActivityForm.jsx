@@ -16,22 +16,26 @@ import styleAlert from "../../components/Alert/Alert.module.scss";
 import style from "./ActivityForm.module.scss";
 
 const ActivityForm = () => {
+  // redux dispatch function
   const dispatch = useDispatch();
 
+  // access filtered countries and createdActivity data from the Redux store
   const countries = useSelector((state) => state.countries.filteredCountries);
   const createdActivity = useSelector((state) => state.activities.newActivity);
 
+  // access the search parameters from the URL
   let [searchParams] = useSearchParams();
 
+  // creates refs to DOM elements for manipulation
   const containerAlert = useRef(null);
   const containerLoading = useRef(null);
   const diffText = useRef(null);
-
   const inputDuration = useRef(null);
   const selectedSeason = useRef(null);
   const selectedCountries = useRef(null);
   const inputDifficulty = useRef(null);
 
+  // initialize state for the new activity form and alert messages
   const [newActivity, setNewActivity] = useState({
     name: { text: "", error: false },
     difficulty: "1",
@@ -39,7 +43,6 @@ const ActivityForm = () => {
     season: { name: "", error: false },
     countries: { all: [], error: false },
   });
-
   const [alertInfo, setAlertInfo] = useState({
     title: "",
     text: "",
@@ -47,9 +50,11 @@ const ActivityForm = () => {
     type: "",
   });
 
+  //handle form submission
   const handleOnSubmit = (e) => {
     e.preventDefault();
     const { name, difficulty, duration, season, countries } = newActivity;
+    // validate form inputs
     if (
       !name.text ||
       !difficulty ||
@@ -57,6 +62,7 @@ const ActivityForm = () => {
       !season.name ||
       !countries.all.length
     ) {
+      // handle input validation errors and show an alert
       if (!name.text) {
         setNewActivity((state) => {
           return { ...state, name: { text: state.name.text, error: true } };
@@ -85,6 +91,8 @@ const ActivityForm = () => {
       }
       return showAlert("Error!", "All inputs are required.", "OK", "error");
     }
+
+    // shows loading indicator and prepares data for dispatch
     showLoading();
     const activity = {
       name: newActivity.name.text,
@@ -93,10 +101,13 @@ const ActivityForm = () => {
       season: newActivity.season.name,
       countries: newActivity.countries.all,
     };
+    // dispatch an action to create the activity
     dispatch(createActivity(activity));
   };
 
+  // clear  form function
   const clearForm = () => {
+    // resets the form state and selected options
     setNewActivity({
       name: { text: "", error: false },
       difficulty: "1",
@@ -107,13 +118,16 @@ const ActivityForm = () => {
     selectedSeason.current.selectedIndex = 0;
     selectedCountries.current.selectedIndex = 0;
     inputDifficulty.current.value = 1;
+    // resets the label difficulty to easy for the input type range
     changeLblDifficulty(1);
   };
 
+  // loading indicator function
   const showLoading = () => {
     containerLoading.current.classList.add(style.display);
   };
 
+  // handle change functions to all the input elements
   const handleChangeName = (e) => {
     const value = e.target.value;
     if (!value) {
@@ -126,7 +140,7 @@ const ActivityForm = () => {
       return { ...state, name: { text: value, error: false } };
     });
   };
-
+  // change the displayed difficulty label (used earlier)
   const handleChangeDifficulty = (e) => {
     const difficulty = e.target.value;
     setNewActivity((state) => {
@@ -134,7 +148,7 @@ const ActivityForm = () => {
     });
     changeLblDifficulty(difficulty);
   };
-
+  // styles for the difficulty change
   const changeLblDifficulty = (difficulty) => {
     const difficulties = [
       { name: "Begginer", className: style.veryEasy },
@@ -165,7 +179,7 @@ const ActivityForm = () => {
       return { ...state, season: { name: value, error: false } };
     });
   };
-
+  // selecting a country
   const handleCountrySelect = (e) => {
     const country = e.target.value;
     const existsCountry = newActivity.countries.all.find((c) => c === country);
@@ -196,6 +210,7 @@ const ActivityForm = () => {
     });
   };
 
+  //prevents typing letters on duration
   const dontAllowLeters = (e) => {
     if (!/[0-9]/.test(e.key)) e.preventDefault();
   };
@@ -204,6 +219,7 @@ const ActivityForm = () => {
     setAlertInfo({ title, text, textBTN, type, showed: true });
   };
 
+  // validate and limit the duration input value
   useEffect(() => {
     if (newActivity.duration.hours > 24)
       setNewActivity((state) => {
@@ -215,6 +231,7 @@ const ActivityForm = () => {
       });
   }, [newActivity.duration.hours]);
 
+  // shows the alert message
   useEffect(() => {
     if (alertInfo.showed) {
       const alert = containerAlert.current.children[0];
@@ -223,23 +240,26 @@ const ActivityForm = () => {
     }
   }, [alertInfo]);
 
+  // handles the created activity and error messages
   useEffect(() => {
     if (createdActivity.created) {
       containerLoading.current.classList.remove(style.display);
       showAlert(
         "Activity Created",
-        "Activity has been created successfully =)",
+        "Activity has been created successfully ヾ(≧ ▽ ≦)ゝ",
         "OK",
         "success"
       );
       clearForm();
-      // dispatch(cleanActivity()); //Con esto se quita que cuando se ACTUALICE la pagina en modo de desarollo se no aparezca la alerta.
+      // dispatch(cleanActivity()); //this prevents the alert from appearing when the page is UPDATE in development mode
     } else if (createdActivity.info.error) {
       containerLoading.current.classList.remove(style.display);
       showAlert("Error", createdActivity.info.error, "OK", "error");
     }
   }, [createdActivity]);
 
+
+  // handle the query parameter for country selection
   useEffect(() => {
     const queryCountry = searchParams.get("country");
     if (queryCountry && countries?.length) {

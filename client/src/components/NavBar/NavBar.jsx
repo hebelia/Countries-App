@@ -1,6 +1,4 @@
 import React from "react";
-
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
 import style from "./NavBar.module.scss";
@@ -10,10 +8,12 @@ import { IconLanding } from "../../assets/CountryIcons";
 
 const Navbar = () => {
   // const navigate = useNavigate();
-  const listRef = useRef(null);
 
+  const listRef = useRef(null);   // creates a reference to a DOM element
+
+  // function to handle the click event for the navigation menu
   const handleOnClick = () => {
-    listRef.current.classList.toggle(style.visible);
+    listRef.current.classList.toggle(style.visible); // toggles the visibility of the menu by adding or removing the .visible class
   };
 
   return (

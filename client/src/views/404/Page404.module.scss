@@ -1,4 +1,3 @@
-
 @import "../../assets/variables.scss";
 
 .container {
@@ -6,7 +5,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: $primary-color; /* Use your color variables */
+  background-color: $third-color; /* Use your color variables */
 }
 
 .infoContainer {
@@ -29,7 +28,7 @@
 
 .globeLoader {
   font-size: 4rem;
-  color: $accent-color; /* Use your color variables */
+  color: $font-dark; /* Use your color variables */
   margin-right: 1rem;
 
   i.fas.fa-plane {
@@ -45,12 +44,16 @@
   transition: color 0.3s ease;
 
   &:hover {
-    color: darken($accent-color, 10%); /* Darken the color on hover */
+    color: darken($button-color, 10%); /* Darken the color on hover */
   }
 }
 
 /* Example of CSS keyframes animation for spinning the globe */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
